@@ -1,0 +1,40 @@
+/*Passar os valores de vetor A e vetor B (cada um com 5 posições) para o vetor C (10 posições)*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define N 5
+#define M 10
+
+int main(){
+
+    int i, vetorA[N], vetorB[N], vetorC[M];
+
+    srand(time(NULL));
+
+        printf("Vetor a\n");
+
+    for(i=0;i<N;i++){
+        vetorA[i]=rand()%10+1;
+        printf("%d\n",vetorA[i]);
+    }
+        printf("=================\n");
+
+    for(i=0;i<N;i++){
+        vetorB[i]=rand()%20+10;
+        printf("%d\n",vetorB[i]);
+    }
+        printf("=================\n");
+        printf("Vetor C\n");
+
+    for(i=0;i<N;i++){
+        vetorC[i] = vetorA[i];
+        printf("%d\n", vetorC[i]);
+    }
+    for(i=0;i<N;i++){
+         vetorC[i] = vetorB[i];
+        printf("%d\n", vetorC[i]);
+    }
+
+
+}
